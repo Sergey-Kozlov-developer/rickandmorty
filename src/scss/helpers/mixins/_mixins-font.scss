@@ -1,0 +1,30 @@
+@mixin font($weight, $size, $color) {
+    font-weight: $weight;
+    font-size: $size;
+    font-family: $family;
+    color: $color;
+    @font-face {
+        font-family: "Playwrite FR Moderne";
+        src: url("./../../../assets/fonts/Playwrite/PlaywriteFRModerne-Regular.ttf");
+    }
+}
+
+$light: 100;
+$normal: 100;
+$regular: 400;
+$bold: 600;
+$semi-bold: 900;
+
+$font-100: 100px;
+$font-24: 24px;
+$font-16: 16px;
+$font-14: 14px;
+$font-12: 12px;
+
+$family: "Playwrite FR Moderne", sans-serif;
+.text {
+    @include font($regular, $font-24, black);
+}
+// .hero__title {
+//     @include font($semi-bold, $font-100, black);
+// }

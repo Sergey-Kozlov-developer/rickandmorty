@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&display=swap");
+
+body {
+    @include font($regular, $font-24, black);
+}
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1940px;
+
+    &--sm {
+        max-width: 840px;
+    }
+}

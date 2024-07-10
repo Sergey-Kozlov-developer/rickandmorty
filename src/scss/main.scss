@@ -1,0 +1,14 @@
+@use "scss-reset/reset";
+
+// Переменные, миксины, функции
+@import "helpers/variables";
+@import "helpers/mixins/mixins-font";
+@import "helpers/function";
+// Основное
+@import "base/base";
+@import "base/container";
+// @import "base/fonts";
+// @import "base/general";
+// components
+@import "components/header";
+@import "components/hero";
