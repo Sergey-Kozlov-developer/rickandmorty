@@ -13,13 +13,13 @@ function App() {
                 </header>
             </div>
             <main>
-                <div className="container">
-                    <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/favorites" element={<FavoritePage />} />
-                        <Route path="/about" element={<AboutPage />} />
-                    </Routes>
-                </div>
+                {/* <div className="container"> */}
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/favorites" element={<FavoritePage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                </Routes>
+                {/* </div> */}
             </main>
         </>
     );

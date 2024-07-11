@@ -7,7 +7,7 @@ const HeroComponent = () => {
                 <h1 className="hero__title">The Rick and Morty API</h1>
                 <img className="hero__img" src={heroImage} alt="" />
             </div>
-            <div className="divider"></div>
+            {/* <div className="divider"></div> */}
         </>
     );
 };
