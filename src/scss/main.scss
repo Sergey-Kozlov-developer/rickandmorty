@@ -1,6 +1,7 @@
-@use "scss-reset/reset";
+// @use "scss-reset/reset";
 
 // Переменные, миксины, функции
+@import "base/reset";
 @import "helpers/variables";
 @import "helpers/mixins/mixins-font";
 @import "helpers/function";

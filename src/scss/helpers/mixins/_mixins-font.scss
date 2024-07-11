@@ -3,10 +3,6 @@
     font-size: $size;
     font-family: $family;
     color: $color;
-    @font-face {
-        font-family: "Playwrite FR Moderne";
-        src: url("./../../../assets/fonts/Playwrite/PlaywriteFRModerne-Regular.ttf");
-    }
 }
 
 $light: 100;

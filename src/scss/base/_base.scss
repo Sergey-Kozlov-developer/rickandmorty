@@ -12,3 +12,17 @@ body {
         max-width: 840px;
     }
 }
+@font-face {
+    font-family: "Playwrite FR Moderne";
+    src: local("Playwrite FR Moderne"), local("PlaywriteFRModerne-Regular"),
+        url("PlaywriteFRModerne-Regular.ttf") format("ttf"),
+        url("PlaywriteFRModerne-ExtraLight.ttf") format("ttf");
+
+    font-weight: normal;
+}
+a.text:active, /* активная/посещенная ссылка */
+a.text:hover,  /* при наведении */
+a.text {
+    text-decoration: none;
+    color: #666;
+}

@@ -11,16 +11,22 @@ const HeaderComponent = () => {
     return (
         <>
             <div className="header">
-                <img src={logo} className="header__logo" alt="" />
-                <nav className="nav">
-                    <ul className="header__nav">
+                <img src={logo} className="logo" alt="" />
+                <div className="nav">
+                    <ul className="nav-link">
                         {routes.map((route, index) => (
-                            <NavLink key={index} to={route.to}>
+                            <NavLink
+                                key={index}
+                                to={route.to}
+                                className={({ isActive }) =>
+                                    isActive ? "active" : "nav-link"
+                                }
+                            >
                                 {route.page}
                             </NavLink>
                         ))}
                     </ul>
-                </nav>
+                </div>
             </div>
         </>
     );
