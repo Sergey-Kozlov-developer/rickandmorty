@@ -7,7 +7,8 @@ const ListCharacterComponent = ({
     species,
     gender,
     image,
-    created,
+    type,
+    origin,
     location,
 }) => {
     return (
@@ -30,17 +31,19 @@ const ListCharacterComponent = ({
                                         : "status-icon_red"
                                 }
                             ></span>
-                            {status} - {species}
+                            {status} - {species} ({gender})
                         </span>
+                        <div className="type">{type}</div>
                     </div>
                     <div className="location">
-                        <span className="location-text">
+                        <span className="location-text">Origin location:</span>
+                        <span className="location-name">{origin.name}</span>
+                        <span className="location-text padding">
                             Last known location:
                         </span>
                         <span className="location-name">{location.name}</span>
                     </div>
-                    <div className="gender">{gender}</div>
-                    <div className="first-seen">{created}</div>
+                    {/* <div className="first-seen">{created}</div> */}
                 </div>
             </div>
         </>
@@ -56,6 +59,7 @@ ListCharacterComponent.propTypes = {
     species: PropTypes.string,
     gender: PropTypes.string,
     image: PropTypes.string,
-    created: PropTypes.string,
+    type: PropTypes.string,
+    origin: PropTypes.object,
     location: PropTypes.object,
 };
