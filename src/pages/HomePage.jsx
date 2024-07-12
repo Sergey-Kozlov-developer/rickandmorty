@@ -2,6 +2,8 @@ import HeroComponent from "@/components/hero/HeroComponent";
 // import HomeCharacterComponent from "@/components/home/HomeCharacterComponent";
 import ListCharacterComponent from "@/components/home/ListCharacterComponent";
 import PaginationComponent from "@/components/pagination/PaginationComponent";
+import SearchComponent from "@/components/search/SearchComponent";
+import SortComponent from "@/components/sort/SortComponent";
 import axios from "axios";
 
 import { useEffect, useState } from "react";
@@ -27,6 +29,10 @@ const HomePage = () => {
             <HeroComponent />
             <section className="section">
                 <div className="container">
+                    <div className="section-sort">
+                        <SearchComponent />
+                        <SortComponent />
+                    </div>
                     <div className="card-wrapper">
                         {character.map((element) => (
                             <div key={element.id}>
