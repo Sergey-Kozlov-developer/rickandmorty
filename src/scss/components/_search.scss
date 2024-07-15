@@ -67,8 +67,8 @@ $close-trans-time: 150ms;
         justify-content: center;
         align-items: center;
         position: absolute;
-        top: ($size / 2) - ($handle-height / 2);
-        right: ($size / 2) - ($handle-height / 2);
+        top: calc(($size / 2) - ($handle-height / 2));
+        right: calc(($size / 2) - ($handle-height / 2));
         transform: rotate(-45deg) translateY($size - $frame-thickness);
         transition: transform $close-trans-time ease-out $close-trans-time;
         &:before,

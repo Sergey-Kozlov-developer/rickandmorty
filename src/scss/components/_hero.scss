@@ -14,6 +14,9 @@
     z-index: 1;
 
     @include font($semi-bold, $font-100, black);
+    @media screen and (min-width: 375px) {
+        @include font($semi-bold, $font-48, black);
+    }
 }
 
 .hero__img {
