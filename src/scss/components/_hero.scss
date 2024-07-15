@@ -14,9 +14,12 @@
     z-index: 1;
 
     @include font($semi-bold, $font-100, black);
-    @media screen and (min-width: 375px) {
+    @media screen and (max-width: 575px) and (max-width: 767px) {
         @include font($semi-bold, $font-48, black);
     }
+    // @media screen and (max-width: 768px) {
+    //     @include font($semi-bold, $font-100, black);
+    // }
 }
 
 .hero__img {
