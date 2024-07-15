@@ -12,17 +12,26 @@ const HomePage = () => {
     const [character, setCharacter] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [pageCount, setPageCount] = useState(1);
+    const [sortValue, setSortValue] = useState({ status: "", gender: "" });
 
-    useEffect(() => {
+    const fetchCharacters = (currentPage = 1, status = "", gender = "") => {
         axios
             .get(
-                `https://rickandmortyapi.com/api/character?page=${currentPage}`
+                `https://rickandmortyapi.com/api/character?page=${currentPage}&status=${status}&gender=${gender}`
             )
             .then((res) => {
                 setCharacter(res.data.results);
                 setPageCount(res.data.info.pages);
             });
-    }, [currentPage, pageCount]);
+    };
+
+    useEffect(() => {
+        fetchCharacters(currentPage, sortValue.status, sortValue.gender);
+    }, [currentPage, sortValue]);
+
+    const handleSortChange = ({ status, gender }) => {
+        setSortValue({ status, gender });
+    };
 
     return (
         <>
@@ -31,7 +40,7 @@ const HomePage = () => {
                 <div className="container">
                     <div className="section-sort">
                         <SearchComponent />
-                        <SortComponent />
+                        <SortComponent onSelectSort={handleSortChange} />
                     </div>
                     <div className="card-wrapper">
                         {character.map((element) => (
