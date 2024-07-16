@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 const HeaderComponent = () => {
     const routes = [
         { to: "/", page: "Home" },
-        { to: "/favorites", page: "Favorite" },
-        { to: "/about", page: "About" },
+        // { to: "/favorites", page: "Favorite" },
+        // { to: "/about", page: "About" },
     ];
 
     return (
