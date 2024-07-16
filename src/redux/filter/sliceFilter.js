@@ -5,6 +5,7 @@ const initialState = {
         status: "Alive",
         gender: "Male",
     },
+    searchValue: "",
 };
 
 const filterSlice = createSlice({
@@ -15,9 +16,12 @@ const filterSlice = createSlice({
         setSort(state, action) {
             state.sort = action.payload;
         },
+        setSearchValue(state, action) {
+            state.searchValue = action.payload;
+        },
     },
 });
 
-export const { setSort } = filterSlice.actions;
+export const { setSort, setSearchValue } = filterSlice.actions;
 
 export default filterSlice.reducer;

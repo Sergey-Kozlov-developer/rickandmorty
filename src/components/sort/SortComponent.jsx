@@ -32,14 +32,7 @@ const SortComponent = () => {
         <>
             <div className="select-wrap">
                 <div className="select">
-                    <select
-                        value={sort.status}
-                        onChange={handleChangeStatus}
-                        defaultValue=""
-                    >
-                        <option value="" disabled hidden>
-                            status
-                        </option>
+                    <select value={sort.status} onChange={handleChangeStatus}>
                         {statusList.map((item) => (
                             <option key={item.value} value={item.value}>
                                 {item.status}
@@ -48,14 +41,7 @@ const SortComponent = () => {
                     </select>
                 </div>
                 <div className="select">
-                    <select
-                        value={sort.gender}
-                        onChange={handleChangeGender}
-                        defaultValue=""
-                    >
-                        <option value="" disabled hidden>
-                            gender
-                        </option>
+                    <select value={sort.gender} onChange={handleChangeGender}>
                         {genderList.map((item) => (
                             <option key={item.value} value={item.value}>
                                 {item.gender}

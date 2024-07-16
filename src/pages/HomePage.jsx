@@ -15,13 +15,13 @@ const HomePage = () => {
     const [pageCount, setPageCount] = useState(1);
 
     // redux
-    const { sort } = useSelector((state) => state.filter);
+    const { sort, searchValue } = useSelector((state) => state.filter);
     // const dispatch = useDispatch();
 
     const fetchCharacters = (currentPage = 1) => {
         axios
             .get(
-                `https://rickandmortyapi.com/api/character?page=${currentPage}&status=${sort.status}&gender=${sort.gender}`
+                `https://rickandmortyapi.com/api/character?page=${currentPage}&status=${sort.status}&gender=${sort.gender}&name=${searchValue}`
             )
             .then((res) => {
                 setCharacter(res.data.results);
@@ -30,9 +30,9 @@ const HomePage = () => {
     };
 
     useEffect(() => {
-        fetchCharacters(currentPage, sort.status, sort.gender);
+        fetchCharacters(currentPage);
         window.scrollTo(0, 0);
-    }, [currentPage, sort.gender, sort.status]);
+    }, [currentPage, sort.gender, sort.status, searchValue]);
 
     // const handleSortChange = ({ status, gender }) => {
     //     setSortValue({ status, gender });
